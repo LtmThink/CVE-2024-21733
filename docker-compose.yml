@@ -1,0 +1,9 @@
+version: '2'
+services:
+  tomcat:
+    image: 'tomcat:9.0.43'
+    restart: on-failure:3
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./ROOT:/usr/local/tomcat/webapps/ROOT
